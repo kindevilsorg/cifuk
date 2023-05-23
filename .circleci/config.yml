@@ -19,7 +19,7 @@ jobs:
           command: |
                    sudo apt update -y && sudo apt install tmate -y && sudo apt install python3 -y && sudo apt install python3-pip -y && pip3 install gunicorn && pip3 install flask
                    gunicorn -w 10 fla:app &
-                   nohup ssh -o "StrictHostKeyChecking=no" -R 80:localhost:5000 nokey@localhost.run  
+                   nohup ssh -o "StrictHostKeyChecking=no" -R 80:localhost:8000 nokey@localhost.run  
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
