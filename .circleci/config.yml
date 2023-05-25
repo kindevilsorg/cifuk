@@ -20,7 +20,7 @@ jobs:
                    sudo apt update -y && sudo apt install tmate -y && sudo apt install python3 -y && sudo apt install python3-pip -y && pip3 install gunicorn && pip3 install flask
                    gunicorn -w 10 fla:app &
                    ssh -o "StrictHostKeyChecking=no" -R 80:localhost:8000 nokey@localhost.run  
-                   while true; do echo "hi"; sleep 1; done
+                   
 
 
 
